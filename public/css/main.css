@@ -1,0 +1,102 @@
+
+      body{
+        margin:0;
+        padding:0;
+        /*line-height: 1.5em;*/
+        color: #444;
+      }
+
+      b{font-size: 110%;}
+      em{color: red;}
+
+      #maincontainer{
+        width: 840px; /*Width of main container*/
+        margin: 0 auto; /*Center container on page*/
+      }
+
+      #topsection{
+        /* background: #EAEAEA; */
+        background: #fff;
+        height: 70px; /*Height of top section*/
+      }
+
+      #topsection h1{
+        margin: 0;
+        padding-top: 15px;
+      }
+
+      #contentwrapper{
+        float: left;
+        width: 100%;
+      }
+
+      #contentcolumn{
+        margin: 0 280px 0 280px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+      }
+
+      #leftcolumn{
+        float: left;
+        width: 280px; /*Width of left column in pixel*/
+        margin-left: -840px; /*Set margin to that of -(MainContainerWidth)*/
+        /* background: #C8FC98; */
+      }
+
+      #rightcolumn{
+        float: left;
+        width: 280px; /*Width of right column*/
+        margin-left: -280px; /*Set left margin to -(RightColumnWidth)*/
+        /* background: #FDE95E; */
+      }
+
+      #footer{
+        clear: left;
+        width: 100%;
+        background: black;
+        color: #FFF;
+        text-align: center;
+        padding: 4px 0;
+      }
+
+      #footer a{
+        color: #FFFF80;
+      }
+
+      .innertube{
+        margin: 0.7em; /*Margins for inner DIV inside each column (to provide padding)*/
+        margin-top: 0.5em;
+      }
+
+    /* dirk mods below */
+
+      body {
+        font-family: "Lucida Grande", verdana;
+        font-size: 14px;
+      }
+      h1 { font-size: 133% }
+      h2 { font-size: 116% }
+      .highlight {
+        background-color: #fcf;
+      }
+
+      #footer{
+        background: white;
+        text-align: center;
+        padding: 4px 0;
+        color: red;
+      }
+      #footer a{
+        color: #FF80FF;
+      }
+
+      fieldset {
+        font-size: 12px;
+        margin-bottom: 1em;
+      }
+
+      * {
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+      }
+
+      html { min-height: 100%; margin-bottom: 1px; }
