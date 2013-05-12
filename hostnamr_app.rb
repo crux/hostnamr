@@ -11,6 +11,10 @@ Bundler.require(:default, :test)
 require 'hiragana'
 require 'solmisation'
 
+get '/' do
+  redirect to('/index.html')
+end
+
 # '/hostnamr/generate?count='+$('generateCount').value+'&schema='+$('schema').value+'&syllables='+$('syllables').value+'&join='+$('join_char').value,
 get '/generate' do
 
@@ -33,7 +37,3 @@ get '/generate' do
   # result rendering
   erb(:hostnames, locals: {hostnames: hostnames})
 end
-
-#get '/' do
-#  erb :index
-#end
