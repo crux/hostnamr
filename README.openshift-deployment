@@ -74,13 +74,14 @@ persist between pushes of your repo.
 Rails 3.0
 ===========
 
-Option 1) (Recommended) Git push your application Gemfile/Gemfile.lock.  This will 
-cause the remote OpenShift node to run bundle install --deployment to download and 
-install your dependencies.  Each subsequent git push will use the previously
-downloaded dependencies as a starting point, so additional downloads will be a delta.
+Option 1) (Recommended) Git push your application Gemfile/Gemfile.lock.  This
+will cause the remote OpenShift node to run bundle install --deployment to
+download and install your dependencies.  Each subsequent git push will use the
+previously downloaded dependencies as a starting point, so additional downloads
+will be a delta.
 
 Option 2) Git add your .bundle and vendor/bundle directories after running
-'bundle install --deployment' locally.  Be sure to exclude any gems that have native 
-code or ensure they can run on RHEL x86_64.
+'bundle install --deployment' locally.  Be sure to exclude any gems that have
+native code or ensure they can run on RHEL x86_64.
 
 
