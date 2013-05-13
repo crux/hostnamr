@@ -3,6 +3,8 @@ hostnamr
 
 A name generator which gives you easily to remember names which mean nothing!
 
+Check out the live site at: <http://hostnamr.openshit.com>
+
 Alorithm & History
 -----------------
 
