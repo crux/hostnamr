@@ -22,7 +22,7 @@ module Hiragana
   def self.doit para = {}
     para = Defaults.merge(para)
     #puts "syllables count: #{para.count}"
-    (0...para[:count]).to_a.map {Hiragana[rand(Hiragana.length)]}.join(para[:join])
+    (0...para[:count]).to_a.map {Hiragana[rand(Hiragana.length)]}.join(para[:join].strip)
   end
 
 end # ~hostnamr

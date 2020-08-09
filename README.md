@@ -23,4 +23,3 @@ This repo includes deployment details on runing this app on the openshift
 cloud by redhat. Ususally i would NOT include this with this source repo, but
 I still need to figure how to separate app source from deployment info in the
 sinatra openshift context (and nowbody seems to care anyhow).
-
