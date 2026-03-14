@@ -31,8 +31,9 @@
       }
     </style>
 
-    <script src="/javascripts/prototype.js" type="text/javascript"></script>
+    <script src="javascripts/prototype.js" type="text/javascript"></script>
     <script type="text/javascript" src="javascripts/domtab.js"></script>
+    <script type="text/javascript" src="javascripts/hostnamr.js"></script>
     <script type="text/javascript">
       /*** Temporary text filler function. Remove when deploying template. ***/
     var gibberish=["This is just some filler text", "Welcome to Dynamic Drive CSS Library", "Demo content nothing to read here"]
@@ -47,14 +48,14 @@
       }
 
       function update_results() {
-        new Ajax.Updater(
-            'hostnamr_results', 
-            '/generate?count='+$('generateCount').value+'&schema='+$('schema').value+'&syllables='+$('syllables').value+'&join='+$('join_char').value,
-            {
-              asynchronous: true, evalScripts: false,
-              onComplete: generate_response_cb, method:'get'
-            }
+        var names = Hostnamr.generate(
+          $('schema').value,
+          parseInt($('syllables').value) || 3,
+          $('join_char').value,
+          parseInt($('generateCount').value) || 10
         );
+        $('hostnamr_results').innerHTML = Hostnamr.renderResults(names);
+        generate_response_cb(null);
       }
 
       function show_schema(e) {
