@@ -1,3 +1,13 @@
+// hostnamr.js
+//
+// Client-side rewrite of the original Ruby/Sinatra backend (hostnamr_app.rb),
+// porting the Hiragana and Solmisation name generators from hiragana.rb and
+// solmisation.rb into the browser. The original app served these via a
+// GET /generate endpoint rendered through views/hostnames.erb — this module
+// replaces that entirely, with no server and no dependencies.
+//
+// The historic Ruby source is preserved in the repository for reference.
+
 const Hostnamr = {
 
   schemas: {
