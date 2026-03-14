@@ -42,14 +42,21 @@
         document.write(gibberish[Math.floor(Math.random()*3)]+" ")
     }
 
+      var currentSchema = 'Hiragana';
+
       function generate_response_cb(response) {
         /*console.log(response);*/
         domtab.showTabReloaded($('show_results'));
       }
 
       function update_results() {
+        var tabList = document.querySelector('ul.domtabs');
+        if (tabList.currentLink) {
+          var id = tabList.currentLink.id.replace('show_', '');
+          if (id === 'Hiragana' || id === 'Solmisation') currentSchema = id;
+        }
         var names = Hostnamr.generate(
-          $('schema').value,
+          currentSchema,
           parseInt($('syllables').value) || 3,
           $('join_char').value,
           parseInt($('generateCount').value) || 10
